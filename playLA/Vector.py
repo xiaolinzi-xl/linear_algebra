@@ -7,6 +7,11 @@ class Vector:
     def __init__(self, lst):
         self._values = list(lst)
 
+    @classmethod
+    def zero(cls, dim):
+        '''返回一个dim维的向量'''
+        return cls([0] * dim)
+
     def __repr__(self):
         return 'Vector({})'.format(self._values)
 
